@@ -405,6 +405,7 @@
   }
 
   function getCors(url, success, error) {
+    url = url + '?cacheBust=' + Date.now();
     var xhr = new XMLHttpRequest();
     if ('withCredentials' in xhr) {
       // XHR for Chrome/Firefox/Opera/Safari.
